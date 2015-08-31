@@ -68,13 +68,16 @@ public class TaskTest {
     assertEquals(savedCategories.size(), 1);
   }
 
-  // @Test
-  // public void save_savesCategoryIdIntoDB_true() {
-  //   Category myCategory = new Category("Household chores");
-  //   myCategory.save();
-  //   Task myTask = new Task("Mow the lawn");
-  //   myTask.save();
-  //   Task savedTask = Task.find(myTask.getId());
-  //   assertEquals(savedTask.getCategoryId(), myCategory.getId());
-  // }
+  @Test
+  public void delete_deletesAllTasksAndListsAssociations() {
+    Category myCategory = new Category ("Household chores");
+    myCategory.save();
+
+    Task myTask = new Task ("Mow the lawn");
+    myTask.save();
+
+    myTask.addCategory(myCategory);
+    myTask.delete();
+    assertEquals(myCategory.getTasks().size(), 0);
+  }
 }

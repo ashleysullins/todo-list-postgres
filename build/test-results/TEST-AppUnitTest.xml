@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AppUnitTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2015-08-31T18:08:24" hostname="epicodus-102.local" time="0.0">
+<testsuite name="AppUnitTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2015-08-31T18:27:41" hostname="epicodus-102.local" time="0.0">
   <properties/>
   <testcase name="methodName_testDescription_expectedOutcome" classname="AppUnitTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
