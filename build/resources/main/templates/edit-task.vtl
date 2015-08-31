@@ -9,16 +9,12 @@
   </ul>
 #end
 
-<h4>Add a task to this category:</h4>
+<h4>Edit a task in this category:</h4>
 
-<form action= '/tasks/$task.taskid/edit' method= 'post'>
+<form action= '/tasks/$task.getId()/edit' method= 'post'>
   <input id="category_id" name="category_id" type="hidden" value="$category.getId()">
   <label for="task_id">Select a task</label>
-  <select id='task_id' name='task_id' type='text'>
-    #foreach($task in $allTasks)
-      <option value="$task.getId()"> $task.getDescription() </option>
-    #end
-    </select>
+  <input id="name" name="name" type="text">
     <button type='submit'>Add task</button>
  </form>
 

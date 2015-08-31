@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="CategoryTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2015-08-31T18:27:41" hostname="epicodus-102.local" time="0.23">
+<testsuite name="CategoryTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2015-08-31T21:00:43" hostname="epicodus-102.local" time="0.218">
   <properties/>
-  <testcase name="equals_returnsTrueIfNamesAretheSame" classname="CategoryTest" time="0.062"/>
-  <testcase name="getTasks_returnsAllTasks_ArrayList" classname="CategoryTest" time="0.061"/>
-  <testcase name="delete_deletesAllTasksAndListsAssoicationes" classname="CategoryTest" time="0.04"/>
+  <testcase name="equals_returnsTrueIfNamesAretheSame" classname="CategoryTest" time="0.048"/>
+  <testcase name="getTasks_returnsAllTasks_ArrayList" classname="CategoryTest" time="0.053"/>
+  <testcase name="delete_deletesAllTasksAndListsAssoicationes" classname="CategoryTest" time="0.03"/>
   <testcase name="all_emptyAtFirst" classname="CategoryTest" time="0.01"/>
-  <testcase name="addTask_addsTaskToCategory" classname="CategoryTest" time="0.025"/>
-  <testcase name="find_findCategoryInDatabase_true" classname="CategoryTest" time="0.015"/>
-  <testcase name="save_savesIntoDatabase_true" classname="CategoryTest" time="0.015"/>
+  <testcase name="addTask_addsTaskToCategory" classname="CategoryTest" time="0.024"/>
+  <testcase name="find_findCategoryInDatabase_true" classname="CategoryTest" time="0.014"/>
+  <testcase name="edit_editCategoryInTaskInDatabase" classname="CategoryTest" time="0.022"/>
+  <testcase name="save_savesIntoDatabase_true" classname="CategoryTest" time="0.014"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

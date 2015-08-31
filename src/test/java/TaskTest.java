@@ -80,4 +80,27 @@ public class TaskTest {
     myTask.delete();
     assertEquals(myCategory.getTasks().size(), 0);
   }
+
+  @Test
+  public void edit_editTaskinCategoryInDatabase() {
+    Category myCategory = new Category ("Household chores");
+    myCategory.save();
+
+    Task myTask = new Task("Mow the lawn");
+    myTask.save();
+
+    myTask.addCategory(myCategory);
+
+    myTask.update("Wash the dishes");
+    assertEquals("Wash the dishes", Task.all().get(0).getDescription());
+  }
+
+  @Test
+  public void markTaskAsDone() {
+    Task myTask = new Task("Mow the lawn");
+    myTask.save();
+    myTask.completed(true);
+    assertEquals(myTask.completed(), true);
+  }
+
 }

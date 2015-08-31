@@ -73,4 +73,16 @@ public class CategoryTest {
      myCategory.delete();
      assertEquals(myTask.getCategories().size(), 0);
    }
+
+   @Test
+   public void edit_editCategoryInTaskInDatabase() {
+     Category myCategory = new Category("Household chores");
+     myCategory.save();
+
+     Task myTask = new Task("Mow the lawn");
+     myTask.save();
+
+     myCategory.update("Places to Visit");
+     assertEquals("Places to Visit", Category.all().get(0).getName());
+   }
 }

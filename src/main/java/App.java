@@ -53,6 +53,29 @@ public class App {
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
+    // post("/tasks/:id/edit", (request, response) -> {
+    //   HashMap<String, Object> model = new HashMap<String, Object>();
+    //   int taskId = Integer.parseInt(request.queryParams("task_id"));
+    //   Task task = Task.find(ta
+    //   int categoryId = Integer.parseInt(request.queryParams("category_id"));
+    //   Category category = Category.find(categoryId);
+    //   String description = request.queryParams("name");
+    //   task.update(description);
+    //   model.put("template", "templates/edit-task.vtl");
+    // return new ModelAndView(model, layout);
+    // }, new VelocityTemplateEngine());
+    //
+    // post("/category/:id/edit", (request, response) -> {
+    //   int taskId = Integer.parseInt(request.queryParams("task_id"));
+    //   int categoryId = Integer.parseInt(request.queryParams("category_id"));
+    //   Category category = Category.find(categoryId);
+    //   Task task = Task.find(taskId);
+    //   String name = request.queryParams("name");
+    //   category.edit(name);
+    //   model.put("template", "templates/edit-category.vtl");
+    //   return new ModelAndView(model, layout);
+    //   }, new VelocityTemplateEngine());
+
     post("/tasks", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
       String description = request.queryParams("description");
@@ -90,6 +113,5 @@ public class App {
       response.redirect("/tasks/" + taskId);
       return null;
     });
-
   }
 }
